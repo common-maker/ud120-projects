@@ -39,7 +39,9 @@ pred = clf.predict(features_test)
 print("Predicting Time:", round(time()-t0, 3), "s")
 
 #accuracy=pred*0.1*10/labels_test
-
+accuracy=np.sum(pred == labels_test)*0.1*10/len(labels_test)
+print("Accuracy: ",round(accuracy,3))
+print(labels_test)
 ##############################################################
 
 ##############################################################
